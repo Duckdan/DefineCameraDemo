@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_camera"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="study.com.cameralibrary.CameraActivity">
+
+
+    <TextureView
+        android:id="@+id/tv_texture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <study.com.cameralibrary.view.CameraView
+        android:id="@+id/cv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rl_camera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="36dp"
+        android:paddingRight="36dp">
+
+        <TextView
+            android:id="@+id/tv_flash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/btn_camera_flash"
+            android:drawablePadding="2dp"
+            android:gravity="center_vertical"
+            android:textColor="#ffffff"
+            android:textSize="9sp"/>
+
+        <ImageView
+            android:id="@+id/iv_facing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/camera_facing"/>
+
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="300px"
+        android:layout_alignParentBottom="true"
+        >
+
+        <study.com.cameralibrary.view.OnOffView
+            android:id="@+id/oov"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/tv_back"
+            android:layout_width="160px"
+            android:layout_height="160px"
+            android:layout_gravity="center"
+            android:background="@drawable/circle"
+            android:gravity="center"
+            android:text="返回"
+            android:textColor="#000"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/tv_ok"
+            android:layout_width="160px"
+            android:layout_height="160px"
+            android:layout_gravity="center"
+            android:background="@drawable/circle"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="#000"
+            android:visibility="gone"
+            />
+    </FrameLayout>
+
+</RelativeLayout>
